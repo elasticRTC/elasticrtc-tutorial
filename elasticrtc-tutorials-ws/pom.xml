@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.elasticrtc</groupId>
+		<artifactId>elasticrtc-tutorials</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>elasticrtc-tutorials-ws</artifactId>
+	<packaging>pom</packaging>
+
+	<name>elasticRTC tutorials WS signalling</name>
+	<description>Sample projects</description>
+
+	<url>https://www.elasticrtc.com/docs/${project.version}</url>
+
+	<licenses>
+		<license>
+			<name>Apache 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<organization>
+		<name>elasticRTC</name>
+		<url>https://www.elasticrtc.com</url>
+	</organization>
+
+	<scm>
+		<url>https://github.com/ElasticRTC/elasticrtc-tutorial</url>
+		<connection>scm:git:https://github.com/ElasticRTC/elasticrtc-tutorial</connection>
+		<developerConnection>scm:git://git@github.com:ElasticRTC/elasticrtc-tutorial</developerConnection>
+		<tag>develop</tag>
+	</scm>
+
+	<developers>
+		<developer>
+			<id>elasticRTC.com</id>
+			<name>elasticRTC.com</name>
+			<organization>elasticRTC.com</organization>
+			<organizationUrl>https://www.elasticrtc.com</organizationUrl>
+		</developer>
+	</developers>
+
+	<modules>
+		<module>elasticrtc-loopback-ws</module>
+		<module>elasticrtc-one2one-ws</module>
+		<module>elasticrtc-one2many-ws</module>
+		<module>elasticrtc-recording-ws</module>
+		<module>elasticrtc-player-ws</module>
+	</modules>
+
+</project>

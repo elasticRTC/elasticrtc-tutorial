@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="img/logo.png" type="image/png" />
+
+<link rel="stylesheet"
+	href="webjars/bootstrap/3.3.6/dist/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="webjars/ekko-lightbox/4.0.2/dist/ekko-lightbox.min.css">
+<link rel="stylesheet" href="webjars/demo-console/1.5.1/index.css">
+<link rel="stylesheet" href="css/kurento.css">
+
+<script src="webjars/jquery/1.12.3/dist/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.6/dist/js/bootstrap.min.js"></script>
+<script src="webjars/ekko-lightbox/4.0.2/dist/ekko-lightbox.min.js"></script>
+<script src="webjars/draggabilly/2.1.0/draggabilly.pkgd.min.js"></script>
+<script src="webjars/adapter.js/0.2.9/adapter.js"></script>
+<script src="webjars/demo-console/1.5.1/index.js"></script>
+
+<script src="js/kurento-utils.js"></script>
+<script src="js/index.js"></script>
+
+<title>elasticRTC Loopback application</title>
+</head>
+
+<body>
+	<header>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".navbar-collapse"></button>
+					<a class="navbar-brand" href="">elasticRTC Tutorial</a>
+				</div>
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a
+							href="https://github.com/Kurento/kurento-tutorial-java/tree/master/kurento-hello-world"><span
+								class="glyphicon glyphicon-file"></span> Source Code</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="page-header">
+			<h1>WebRTC in loopback</h1>
+			<p>
+				This application shows a <i>WebRtcEndpoint</i> connected to itself
+				(loopback). Take a look to the <a href="img/pipeline.png"
+					data-toggle="lightbox" data-title="Hello World Media Pipeline"
+					data-footer="WebRtcEnpoint in loopback">Media Pipeline</a>. To run
+				this demo follow these steps:
+			</p>
+			<ol>
+				<li>Open this page in a WebRTC-compliant browser
+					(Chrome, Firefox).</li>
+				<li>Click on <i>Start</i> button.
+				<li>Grant access to the camera and microphone. After the
+					SDP negotiation, loopback should start.
+				<li>Click on <i>Stop</i> to finish the communication.
+				</li>
+			</ol>
+		</div>
+		<div class="row">
+			<div class="col-md-5">
+				<h3>Local stream</h3>
+				<video id="videoInput" autoplay width="480px" height="360px"
+					poster="img/webrtc.png"></video>
+			</div>
+			<div class="col-md-2">
+				<a id="start" href="#" class="btn btn-success"><span
+					class="glyphicon glyphicon-play"></span> Start</a><br /> <br /> <a
+					id="stop" href="#" class="btn btn-danger"><span
+					class="glyphicon glyphicon-stop"></span> Stop</a>
+			</div>
+			<div class="col-md-5">
+				<h3>Remote stream</h3>
+				<video id="videoOutput" autoplay width="480px" height="360px"
+					poster="img/webrtc.png"></video>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<label class="control-label" for="console">Console</label><br>
+				<br>
+				<div id="console" class="democonsole">
+					<ul></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="foot-fixed-bottom">
+			<div class="container text-center">
+				<hr>
+				<div class="row">
+					<a href="https://www.elasticrtc.com"><img src="img/logo.png"
+						alt="elasticRTC" height="50px"></a>
+				</div>
+				<div class="row">&copy; 2016 elasticRTC</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
