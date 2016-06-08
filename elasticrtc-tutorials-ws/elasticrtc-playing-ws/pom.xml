@@ -8,10 +8,10 @@
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>elasticrtc-player-ws</artifactId>
+	<artifactId>elasticrtc-playing-ws</artifactId>
 	<packaging>jar</packaging>
 
-	<name>elasticRTC Java Tutorial - Player - WS</name>
+	<name>elasticRTC Java Tutorial - Playing contents - WS</name>
 	<description>Play of a video through WebRTC</description>
 
 	<licenses>
