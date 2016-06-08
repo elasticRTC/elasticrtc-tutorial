@@ -48,7 +48,7 @@ public class LoopbackApp implements WebSocketConfigurer {
 
   @Override
   public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-    registry.addHandler(handler(), "/helloworld");
+    registry.addHandler(handler(), "/loopback");
   }
 
   public static void main(String[] args) throws Exception {
