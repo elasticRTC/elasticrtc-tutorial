@@ -58,7 +58,7 @@ import com.google.gson.JsonObject;
  */
 public class RecorderHandler extends TextWebSocketHandler {
 
-  private static final String RECORDER_FILE_PATH = "file:///tmp/HelloWorldRecorded.webm";
+  private static final String RECORDER_FILE_PATH = "sample-recordings/KurentoRecorded.webm";
 
   private final Logger log = LoggerFactory.getLogger(RecorderHandler.class);
   private static final Gson gson = new GsonBuilder().create();
