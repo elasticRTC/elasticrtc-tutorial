@@ -10,7 +10,7 @@
 	</parent>
 
 	<artifactId>elasticrtc-tutorials</artifactId>
-	<version>6.5.0-SNAPSHOT</version>
+	<version>6.5.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>elasticRTC Tutorials</name>
