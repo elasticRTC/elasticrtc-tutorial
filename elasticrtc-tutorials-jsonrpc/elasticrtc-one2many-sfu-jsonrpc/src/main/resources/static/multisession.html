@@ -6,7 +6,7 @@
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="shortcut icon" href="img/logo.png" type="image/png" />
+<link rel="shortcut icon" href="img/kurento.png" type="image/png" />
 
 <link rel="stylesheet"
 	href="webjars/bootstrap/3.3.6/dist/css/bootstrap.min.css">
@@ -21,11 +21,12 @@
 <script src="webjars/adapter.js/0.2.9/adapter.js"></script>
 <script src="webjars/demo-console/1.5.1/index.js"></script>
 
+
 <script src="js/kurento-utils.js"></script>
 <script src="js/kurento-jsonrpc.js"></script>
-<script src="js/index.js"></script>
+<script src="js/multisession.js"></script>
 
-<title>elasticRTC tutorial: Simple WebRTC loopback</title>
+<title>elasticRTC SFU Demo</title>
 </head>
 
 <body>
@@ -48,43 +49,36 @@
 			</div>
 		</div>
 	</header>
+
 	<div class="container">
 		<div class="page-header">
-			<h1>Simple WebRTC loopback</h1>
-			<p>
-				This application shows a <i>WebRtcEndpoint</i> connected to itself
-				(loopback). Take a look to the <a href="img/pipeline.png"
-					data-toggle="lightbox" data-title="Hello World Media Pipeline"
-					data-footer="WebRtcEnpoint in loopback">Media Pipeline</a>. To run
-				this demo follow these steps:
-			</p>
-			<ol>
-				<li>Open this page in a WebRTC-compliant browser
-					(Chrome, Firefox).</li>
-				<li>Click on <i>Start</i> button.
-				<li>Grant access to the camera and microphone. After the
-					SDP negotiation the loopback should start.
-				<li>Click on <i>Stop</i> to finish the communication.
-				</li>
-			</ol>
+			<h1 id='sfu-header'>SFU demo</h1>
 		</div>
-		<div class="row">
-			<div class="col-md-5">
-				<h3>Local stream</h3>
-				<video id="videoInput" autoplay width="480px" height="360px"
-					poster="img/webrtc.png"></video>
+
+		<div id="streams">
+			<div class="row">
+				<div class="col-md-12">
+					<a id="start" href="#" class="btn btn-success"><span
+						class="glyphicon glyphicon-play"></span> Start</a> 
+					<a id="stop" href="#" class="btn btn-danger"><span
+						class="glyphicon glyphicon-stop"></span> Stop</a> 
+					<a id="add-viewer"
+						href="#" class="btn btn-danger"><span
+						class="glyphicon glyphicon-stop"></span> Add Viewer</a>
+					<label class="checkbox-inline" id="simulcast-label">
+						<input id="simulcast-checkbox" type="checkbox">Enable Simulcast
+					</label>					
+				</div>
 			</div>
-			<div class="col-md-2">
-				<a id="start" href="#" class="btn btn-success"><span
-					class="glyphicon glyphicon-play"></span> Start</a><br /> <br /> <a
-					id="stop" href="#" class="btn btn-danger"><span
-					class="glyphicon glyphicon-stop"></span> Stop</a>
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Local stream</h3>
+					<video id="videoFeed" autoplay width="480px" height="270px"
+						poster="img/webrtc.png"></video>
+				</div>
 			</div>
-			<div class="col-md-5">
-				<h3>Remote stream</h3>
-				<video id="videoOutput" autoplay width="480px" height="360px"
-					poster="img/webrtc.png"></video>
-			</div>
+		</div>
+		<div id="viewers">
 		</div>
 		<div class="row">
 			<div class="col-md-12">

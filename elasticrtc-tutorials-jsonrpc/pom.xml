@@ -42,6 +42,7 @@
 	<modules>
 		<module>elasticrtc-loopback-jsonrpc</module>
 		<module>elasticrtc-one2one-jsonrpc</module>
+		<module>elasticrtc-one2many-sfu-jsonrpc</module>
 	</modules>
 
 </project>
